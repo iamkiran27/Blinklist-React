@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Booklist from "./Booklist";
 
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import FinishedBookList from "./FinishedBooks";
+import FinishedBookList from "./FinishedBookList";
 
 const useStyles = makeStyles({
   tab: {

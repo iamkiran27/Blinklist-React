@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import { Typography } from "@mui/material";
 
-import SearchBar from "../molecules/search";
+import SearchBar from "../molecules/SearchBar";
 
 import book1 from "../../assets/book1.png";
 
@@ -14,7 +14,7 @@ import book8 from "../../assets/book8.png";
 import book9 from "../../assets/book9.png";
 import beyond from "../../assets/beyond.png";
 import { useState } from "react";
-import Books from "./entrepreneurBooks";
+import Books from "./EntrepreneurBooks";
 
 const useStyles = makeStyles({
   banner: {

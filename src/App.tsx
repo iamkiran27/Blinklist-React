@@ -137,11 +137,11 @@ const App: React.FC = () => {
       finished: boolean;
       added: boolean;
     }[] = [];
-    data.map((data) => {
-      if (data.id === id) {
-        data.finished = !data.finished;
+    data.map((d) => {
+      if (d.id === id) {
+        d.finished = !d.finished;
       }
-      dataBooks.push(data);
+      dataBooks.push(d);
     });
     setData(dataBooks);
   };
@@ -157,11 +157,11 @@ const App: React.FC = () => {
       added: boolean;
     }[] = [];
 
-    data.map((data) => {
-      if (data.id === id) {
-        data.finished = !data.finished;
+    data.map((d) => {
+      if (d.id === id) {
+        d.finished = !d.finished;
       }
-      return dataBooks.push(data);
+      return dataBooks.push(d);
     });
     setData(dataBooks);
   };

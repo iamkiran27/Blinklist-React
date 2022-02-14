@@ -51,7 +51,7 @@ type BooksData = {
   handleFinish: (id: number) => void;
 };
 
-export default function Books(props: BooksData) {
+export default function EntrepreneurBooks(props: BooksData) {
   const style = useStyles();
   return (
     <Grid container direction="row" alignItems="center" marginTop="10px">

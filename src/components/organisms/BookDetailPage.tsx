@@ -5,7 +5,7 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { NavLink, useParams } from "react-router-dom";
 import React from "react";
 
-import BookTabs from "./bootabs";
+import BookTabs from "./BookTabs";
 
 const useStyles = makeStyles({
   main: {

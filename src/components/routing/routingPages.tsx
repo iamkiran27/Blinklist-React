@@ -1,9 +1,9 @@
 import Footer from "../organisms/Footer";
-import LandingPage from "../organisms/Landingpage";
+import LandingPage from "../organisms/LandingPage";
 import Navbar from "../organisms/Navbar";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import EntrepreneurPage from "../organisms/entrepreneurPage";
-import BookDetailPage from "../organisms/BookDetail";
+import EntrepreneurPage from "../organisms/EntrepreneurPage";
+import BookDetailPage from "../organisms/BookDetailPage";
 
 interface Props {
   data: {
