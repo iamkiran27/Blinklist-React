@@ -33,7 +33,7 @@ interface TabPanelProps {
   value: number;
 }
 
-function TabPanel(props: TabPanelProps) {
+function BookTabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -53,7 +53,7 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-function a11yProps(index: number) {
+function a11yPropsBook(index: number) {
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
@@ -73,7 +73,7 @@ export default function BookTabs() {
       sx={{
         width: "680px",
         marginTop: "50px",
-        // marginLeft: "50px",
+
         marginBottom: "50px",
       }}
     >
@@ -90,26 +90,29 @@ export default function BookTabs() {
           indicatorColor="primary"
           onChange={handleChange}
           aria-label="basic tabs example"
-          // style={{ backgroundColor: "gray" }}
           TabIndicatorProps={{
             style: { backgroundColor: "#22C870" },
           }}
         >
-          <Tab label="Synopsis " {...a11yProps(0)} className={classes.tab} />
+          <Tab
+            label="Synopsis "
+            {...a11yPropsBook(0)}
+            className={classes.tab}
+          />
 
           <Tab
             label="Who is it for ?"
-            {...a11yProps(1)}
+            {...a11yPropsBook(1)}
             className={classes.tab}
           />
           <Tab
             label="About the author"
-            {...a11yProps(2)}
+            {...a11yPropsBook(2)}
             className={classes.tab}
           />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
+      <BookTabPanel value={value} index={0}>
         <Typography className={classes.tabContent}>
           Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill
           Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for
@@ -118,21 +121,21 @@ export default function BookTabs() {
           original text, supplemented with cutting-edge insights and case
           studies pertinent to today’s business world.
         </Typography>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
+      </BookTabPanel>
+      <BookTabPanel value={value} index={1}>
         <Typography className={classes.tabContent}>
           Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill
           Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for
           the entrepreneurs.
         </Typography>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
+      </BookTabPanel>
+      <BookTabPanel value={value} index={2}>
         <Typography className={classes.tabContent}>
           Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill
           Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for
           the entrepreneurs, visionaries, and innovators of today.
         </Typography>
-      </TabPanel>
+      </BookTabPanel>
     </Box>
   );
 }

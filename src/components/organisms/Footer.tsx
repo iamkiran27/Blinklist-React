@@ -23,8 +23,6 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default function Footer() {
   const classes = useStyles();
   return (
-    // <div className="footer">
-    //   <div className="footer__content">
     <footer>
       <Box
         px={{ xs: 3, sm: 7 }}
@@ -41,12 +39,10 @@ export default function Footer() {
                 </a>
               </Box>
               <Box>
-                {/* <Link href="/" underline="hover" className={classes.lnkstl}> */}
                 <br></br>
                 <Typography variant="h4" className={classes.lnkstl}>
                   Big ideas in small packages Start learnign now
                 </Typography>
-                {/* </Link> */}
               </Box>
             </Grid>
 
@@ -156,7 +152,5 @@ export default function Footer() {
         </Container>
       </Box>
     </footer>
-    //   </div>
-    // </div>
   );
 }

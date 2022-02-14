@@ -1,9 +1,6 @@
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import BasicTabs from "./TabsApi";
-// import Footer from "./Footer";
-import Navbar from "../organisms/Navbar";
-import Footer from "../organisms/Footer";
 
 type BookData = {
   booksdata: {
@@ -27,7 +24,7 @@ const useStyles = makeStyles(() => ({
 
   heading: {
     position: "absolute",
-    // backgroundColor: "pink",
+
     width: "190px",
     height: "45px",
     left: "380px",

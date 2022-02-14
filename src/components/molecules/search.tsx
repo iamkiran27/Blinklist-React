@@ -11,7 +11,6 @@ type FilterData = {
 };
 
 const SearchBar = (props: FilterData) => {
-  //   const classes = useStyles();
   return (
     <TextField
       fullWidth={true}
@@ -19,8 +18,6 @@ const SearchBar = (props: FilterData) => {
       id="input-with-icon-textfield"
       placeholder="search by author"
       onChange={(e) => {
-        // setSearch(e.target.value);
-        // setAuthor(e.target.value);
         props.filter(e.target.value);
       }}
       InputProps={{

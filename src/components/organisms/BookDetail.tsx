@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import { Button, Grid, Typography, Link } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { NavLink, useParams } from "react-router-dom";
@@ -174,11 +174,9 @@ const BookDetailPage = (props: Handle) => {
                       Finish Reading
                     </NavLink>
                   </Button>{" "}
-                  {/* </Link> */}
                 </Grid>
                 <Grid item className={classes.kindle}>
                   <Button
-                    // disabled={true}
                     sx={{
                       textTransform: "none",
                       color: "gray",
@@ -187,8 +185,6 @@ const BookDetailPage = (props: Handle) => {
                       paddingRight: "20px",
                     }}
                     variant="text"
-                    // color="secondary"
-                    // className={classes.}
                   >
                     Send to Kindle
                     <ArrowRightAltIcon

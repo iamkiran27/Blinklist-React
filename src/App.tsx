@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
-import Footer from "./components/organisms/Footer";
-import LandingPage from "./components/organisms/Landingpage";
-import Navbar from "./components/organisms/Navbar";
 import "./App.css";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import EntrepreneurPage from "./components/organisms/entrepreneurPage";
-import BookDetailPage from "./components/organisms/BookDetail";
 import RoutingPages from "./components/routing/routingPages";
 
 import book1 from "./assets/book1.png";
@@ -150,7 +144,6 @@ const App: React.FC = () => {
       dataBooks.push(data);
     });
     setData(dataBooks);
-    // console.log("After finished button clicked", data);
   };
 
   const handleReadAgain = (id: number) => {
@@ -163,11 +156,12 @@ const App: React.FC = () => {
       finished: boolean;
       added: boolean;
     }[] = [];
+
     data.map((data) => {
       if (data.id === id) {
         data.finished = !data.finished;
       }
-      dataBooks.push(data);
+      return dataBooks.push(data);
     });
     setData(dataBooks);
   };
@@ -175,38 +169,6 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="app" id="app">
-        {/* <Navbar />
-        <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <LandingPage
-                  bookdata={data}
-                  handleReadAgain={handleReadAgain}
-                  handleFinishReading={handleFinish}
-                />
-              }
-            />
-            <Route
-              path="/entrepreneur"
-              element={
-                <EntrepreneurPage
-                  booksdata={data}
-                  handleFinish={handleFinish}
-                />
-              }
-            />
-            <Route
-              path="/book/:id"
-              element={
-                <BookDetailPage books={data} handleFinish={handleFinish} />
-              }
-            />
-          </Routes>
-        </BrowserRouter>
-
-        <Footer /> */}
         <RoutingPages
           data={data}
           handleReadAgain={handleReadAgain}

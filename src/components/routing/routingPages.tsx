@@ -1,10 +1,6 @@
-import React from "react";
 import Footer from "../organisms/Footer";
 import LandingPage from "../organisms/Landingpage";
 import Navbar from "../organisms/Navbar";
-// import "./App.css";
-import { createTheme } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import EntrepreneurPage from "../organisms/entrepreneurPage";
 import BookDetailPage from "../organisms/BookDetail";
@@ -25,7 +21,6 @@ interface Props {
 
 const RoutingPages = (props: Props) => {
   return (
-    //   <div className="app" id="app">
     <>
       <BrowserRouter>
         <Navbar />

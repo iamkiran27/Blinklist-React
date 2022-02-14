@@ -1,4 +1,4 @@
-import { Avatar, Box, Grid, Link } from "@mui/material";
+import { Avatar, Box, Grid } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
@@ -6,7 +6,7 @@ import "./Navbar.css";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 import deepOrange from "@mui/material/colors/deepOrange";
-import AccountBalanceOutlinedIcon from "@mui/icons-material/AccountBalanceOutlined";
+
 import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 
 const Navbar: React.FC = () => {
@@ -77,16 +77,11 @@ const Navbar: React.FC = () => {
                     </Grid>
 
                     <Grid item>
-                      {/* <Link  underline="none"> */}
                       <Typography>Entreprenership</Typography>
-                      {/* </Link> */}
                     </Grid>
-                    {/* </Link> */}
                   </Grid>
                 </Box>
               </NavLink>
-              {/* </Link> */}
-              {/* </BLink> */}
 
               <Box>
                 <Grid container>
@@ -136,10 +131,6 @@ const Navbar: React.FC = () => {
             </Box>
             <Box marginTop={3} paddingTop={2}>
               <Box>
-                {/* <span>
-                  <RocketOutlinedIcon></RocketOutlinedIcon>
-                </span>
-                Entrepreneurship */}
                 <Grid container>
                   <Grid item>
                     <RocketOutlinedIcon></RocketOutlinedIcon>
@@ -258,22 +249,15 @@ const Navbar: React.FC = () => {
 
 export default Navbar;
 export function openExplore(e: React.MouseEvent) {
-  if (document.getElementById("explore")?.style.display == "none") {
+  if (document.getElementById("explore")?.style.display === "none") {
     const ele = document.getElementById("explore") as HTMLElement;
     ele.style.display = "block";
     ele.style.position = "absolute";
     console.log(e.target);
 
     ele.style.zIndex = "999";
-    // const back = document.getElementById("app") as HTMLElement;
-    // back.style.backgroundColor = "rgba(157, 163, 166, 0.45)";
   } else {
     const ele = document.getElementById("explore") as HTMLElement;
     ele.style.display = "none";
-    // const back = document.getElementById("app") as HTMLElement;
-    // back.style.backgroundColor = "white";
   }
-}
-function rgba(arg0: number, arg1: number, arg2: number, arg3: number): string {
-  throw new Error("Function not implemented.");
 }

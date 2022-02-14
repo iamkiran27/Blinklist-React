@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import CardActions from "@mui/material/CardActions";
+
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { makeStyles } from "@material-ui/core";
@@ -20,9 +20,6 @@ const useStyles = makeStyles({
     borderRadius: "0px 0px 8px 8px",
   },
   button: {
-    // position: "relative",
-    // botton: "0px",
-    // top: "10px",
     width: "100%",
     textTransform: "none",
 
@@ -36,7 +33,6 @@ const useStyles = makeStyles({
   card: {
     "&:hover": {
       backgroundColor: "#F1F6F4",
-      // color: "#FFFFFF",
     },
   },
 });
@@ -68,7 +64,6 @@ export default function Books(props: BooksData) {
                 marginBottom: 5,
                 marginLeft: 5,
                 borderRadius: "10px",
-                // maxHeight: "500px",
               }}
               className={book.added ? " " : style.card}
               key={book.name}
@@ -92,20 +87,11 @@ export default function Books(props: BooksData) {
                       sx={{ height: "16.67px", width: "16.67px" }}
                     ></AccessTimeIcon>
                   </Grid>
-                  <Grid
-                    item
-                    // className={style.gridItem}
-                  >
-                    <Typography
-                    //   className={style.readTypo}
-                    >
-                      {book.time}
-                    </Typography>
+                  <Grid item>
+                    <Typography>{book.time}</Typography>
                   </Grid>
                 </Grid>
-                <span
-                //   className={style.more}
-                >
+                <span>
                   <MoreHorizIcon></MoreHorizIcon>
                 </span>
               </CardContent>
@@ -118,8 +104,6 @@ export default function Books(props: BooksData) {
 
                     color: "#0365F2",
                     border: "none",
-                    // width: "290px",
-                    // height: "45px",
                   }}
                   className={style.button}
                   variant="text"

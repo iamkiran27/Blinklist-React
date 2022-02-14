@@ -1,12 +1,10 @@
 .navbar {
-  /* display: flex; */
   height: 86px;
   margin: auto;
   width: 1200px;
   margin-top: 10px;
   background-color: #ffffff;
   border-radius: 10px;
-  /* margin-bottom: 10px; */
 }
 
 li:hover {
@@ -15,7 +13,6 @@ li:hover {
 }
 
 .group__items {
-  /* cursor: pointer; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,7 +25,6 @@ li:hover {
   margin-left: 3rem;
 }
 .navbar li {
-  /* background-color: aqua; */
   margin-left: 2.5rem;
 
   text-align: left;
