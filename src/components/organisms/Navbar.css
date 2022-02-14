@@ -1,0 +1,35 @@
+.navbar {
+  /* display: flex; */
+  height: 86px;
+  margin: auto;
+  width: 1200px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  /* margin-bottom: 10px; */
+}
+
+li:hover {
+  border-bottom: 3px solid #2ce080;
+  cursor: pointer;
+}
+
+.group__items {
+  /* cursor: pointer; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.group__search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 3rem;
+}
+.navbar li {
+  /* background-color: aqua; */
+  margin-left: 2.5rem;
+
+  text-align: left;
+}
