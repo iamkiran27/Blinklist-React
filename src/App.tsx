@@ -29,9 +29,9 @@ const App: React.FC = () => {
   useEffect(() => {
     axios
       .get("http://localhost:8000/data")
-      .then((data) => {
-        console.log(data.data);
-        setData(data.data);
+      .then((books) => {
+        console.log(books.data);
+        setData(books.data);
       })
       .catch((err) => console.log("Error :", err));
   }, []);
