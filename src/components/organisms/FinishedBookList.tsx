@@ -57,7 +57,7 @@ const useStyles = makeStyles({
   },
 });
 
-type BookData = {
+type FinishedBookData = {
   books: {
     id: number;
     image: string;
@@ -70,7 +70,7 @@ type BookData = {
   handleReadAgain: (id: number) => void;
 };
 
-const FinishedBookList = (props: BookData) => {
+const FinishedBookList = (props: FinishedBookData) => {
   console.log("data in finished tab ", props.books);
   const style = useStyles();
   return (
