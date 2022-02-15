@@ -1,0 +1,95 @@
+{
+  "data": [
+    {
+      "id": 0,
+      "image": "https://www.linkpicture.com/q/book1.png",
+      "name": "Bring Your Human to Work",
+      "author": "Erica Keswin",
+      "time": "13-minute read",
+      "finished": false,
+      "added": true
+    },
+    {
+      "id": 1,
+
+      "image": "https://www.linkpicture.com/q/beyond.png",
+      "name": "Beyond Entrepreneurship",
+      "author": "Jim Collins",
+      "time": "13-minute read",
+      "finished": false,
+      "added": false
+    },
+    {
+      "id": 2,
+      "image": "https://www.linkpicture.com/q/book3_1.png",
+      "name": "Doesn't Hurt to Ask",
+      "author": "Trey Gowdy",
+      "time": "13-minute read",
+      "finished": false,
+      "added": true
+    },
+    {
+      "id": 3,
+      "image": "https://www.linkpicture.com/q/book4_1.png",
+      "name": "The Fate of Food",
+      "author": "Amanda Little",
+      "time": "12-minute read",
+      "finished": false,
+      "added": true
+    },
+    {
+      "id": 4,
+      "image": "https://www.linkpicture.com/q/book5.png",
+      "name": "Lives of the Stoics",
+      "author": "Ryan Holday, Stephen Hansel",
+      "time": "13-minute read",
+      "finished": false,
+      "added": true
+    },
+    {
+      "id": 5,
+      "image": "https://www.linkpicture.com/q/book6.png",
+      "name": "Loving Your Business",
+      "author": "Debbie King",
+      "time": "13-minute read",
+      "finished": false,
+      "added": false
+    },
+    {
+      "id": 6,
+      "image": "https://www.linkpicture.com/q/book7.png",
+      "name": "The Lonely Century",
+      "author": "Noreena Hertz",
+      "time": "15-minute read",
+      "finished": false,
+      "added": true
+    },
+    {
+      "id": 7,
+      "image": "https://www.linkpicture.com/q/book8.png",
+      "name": "Eat Better, Feel Better",
+      "author": "Giada De Laurentiis",
+      "time": "13-minute read",
+      "finished": false,
+      "added": true
+    },
+    {
+      "id": 8,
+      "image": "https://www.linkpicture.com/q/book9.png",
+      "name": "Dropshipping",
+      "author": "James Moore",
+      "time": "12-minute read",
+      "finished": false,
+      "added": true
+    },
+    {
+      "id": 9,
+      "image": "https://www.linkpicture.com/q/book2.png",
+      "name": "Employee to Entrepreneur",
+      "author": "Steve Glaveski",
+      "time": "15-minute read",
+      "finished": false,
+      "added": false
+    }
+  ]
+}

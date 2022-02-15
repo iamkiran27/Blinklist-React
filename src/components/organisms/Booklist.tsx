@@ -97,9 +97,9 @@ const Booklist = (props: BookData) => {
                   key={book.name}
                 >
                   <CardMedia
+                    src={book.image}
                     component="img"
                     height="300px"
-                    image={book.image}
                     alt="Book"
                   />
                   <CardContent>

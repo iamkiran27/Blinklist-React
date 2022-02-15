@@ -13,7 +13,6 @@ type FilterData = {
 const SearchBar = (props: FilterData) => {
   return (
     <TextField
-      fullWidth={true}
       color="info"
       id="input-with-icon-textfield"
       placeholder="search by author"
