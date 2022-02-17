@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 const ReadNowButton = () => {
   return (
     <Button
+      role="readNowButton"
       sx={{
         textTransform: "none",
         fontSize: "16px",

@@ -9,6 +9,7 @@ interface ReadAgainProps {
 function ReadAgainButton(props: ReadAgainProps) {
   return (
     <Button
+      role="readAgainButton"
       onClick={(e) => {
         props.handleReadAgain(props.boodId);
       }}
