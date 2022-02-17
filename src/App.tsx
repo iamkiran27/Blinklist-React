@@ -5,6 +5,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import RoutingPages from "./components/routing/routingPages";
 import axios from "axios";
 
+import { useAuth0 } from "@auth0/auth0-react";
+
 export const theme = createTheme({
   palette: {
     primary: {
@@ -14,6 +16,8 @@ export const theme = createTheme({
 });
 
 const App: React.FC = () => {
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
   const [data, setData] = React.useState<
     {
       id: number;
@@ -79,17 +83,17 @@ const App: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {data.length == 0 ? (
+      {/* {!isAuthenticated ? (
         <h1>Loading....</h1>
-      ) : (
-        <div className="app" id="app">
-          <RoutingPages
-            data={data}
-            handleReadAgain={handleReadAgain}
-            handleFinish={handleFinish}
-          />
-        </div>
-      )}
+      ) : ( */}
+      <div className="app" id="app">
+        <RoutingPages
+          data={data}
+          handleReadAgain={handleReadAgain}
+          handleFinish={handleFinish}
+        />
+      </div>
+      {/* )} */}
     </ThemeProvider>
   );
 };

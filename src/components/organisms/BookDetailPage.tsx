@@ -3,11 +3,15 @@ import { Button, Grid, Typography } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { NavLink, useParams } from "react-router-dom";
+
 import React from "react";
 
 import BookTabs from "./BookTabs";
+import ReadNowButton from "../atoms/ReadNowButton/ReadNowButton";
+import FinishReadingButton from "../atoms/FinishReadingButton/FinishReadingButton";
+import KindleButton from "../atoms/KindleButton/KindleButton";
 
-const useStyles = makeStyles({
+export const useStyles = makeStyles({
   main: {
     width: "1100px",
 
@@ -141,21 +145,10 @@ const BookDetailPage = (props: Handle) => {
               </Grid>
               <Grid container direction="row" className={classes.buttonGrid}>
                 <Grid item className={classes.readnow}>
-                  <Button
-                    sx={{
-                      textTransform: "none",
-                      fontSize: "16px",
-                      paddingLeft: "20px",
-                      paddingRight: "20px",
-                      borderColor: "black",
-                    }}
-                    variant="outlined"
-                  >
-                    Read now
-                  </Button>
+                  <ReadNowButton />
                 </Grid>
                 <Grid item className={classes.finish}>
-                  <Button
+                  {/* <Button
                     disabled={active ? true : false}
                     onClick={(e) => {
                       console.log("bookdata id : ", bookdata.id);
@@ -173,10 +166,17 @@ const BookDetailPage = (props: Handle) => {
                     <NavLink style={{ color: "black" }} to="/">
                       Finish Reading
                     </NavLink>
-                  </Button>{" "}
+                  </Button>{" "} */}
+
+                  <FinishReadingButton
+                    disabled={active}
+                    bookId={bookdata.id}
+                    setActive={setActive}
+                    handleFinish={props.handleFinish}
+                  />
                 </Grid>
                 <Grid item className={classes.kindle}>
-                  <Button
+                  {/* <Button
                     sx={{
                       textTransform: "none",
                       color: "gray",
@@ -190,7 +190,8 @@ const BookDetailPage = (props: Handle) => {
                     <ArrowRightAltIcon
                       className={classes.arrow}
                     ></ArrowRightAltIcon>
-                  </Button>{" "}
+                  </Button>{" "} */}
+                  <KindleButton />
                 </Grid>
               </Grid>
             </Grid>

@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import { Typography } from "@mui/material";
-import SearchBar from "../molecules/SearchBar";
+import SearchBar from "../molecules/SearchBar/SearchBar";
 import { useState } from "react";
 import Books from "./EntrepreneurBooks";
 

@@ -1,6 +1,7 @@
 import "./Footer.css";
 import { Box, Container, Grid, Link, Theme, Typography } from "@mui/material";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import BlinkListLogo from "../atoms/BlinklistLogo/BlinkListLogo";
 
 const useStyles = makeStyles((theme: Theme) => ({
   lnkstl: {
@@ -34,9 +35,10 @@ export default function Footer() {
           <Grid container spacing={5}>
             <Grid item xs={12} sm={5}>
               <Box borderBottom={2}>
-                <a className="navbar-brand">
+                {/* <a className="navbar-brand">
                   <img src={require("../atoms/logo.png")} height="30" alt="" />
-                </a>
+                </a> */}
+                <BlinkListLogo />
               </Box>
               <Box>
                 <br></br>

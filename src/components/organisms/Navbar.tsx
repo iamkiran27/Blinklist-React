@@ -9,12 +9,22 @@ import deepOrange from "@mui/material/colors/deepOrange";
 
 import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 
+import { useAuth0 } from "@auth0/auth0-react";
+import BlinkListLogo from "../atoms/BlinklistLogo/BlinkListLogo";
+import SearchIconComponent from "../atoms/SearchIcon/SearchIconComponent";
+import Explore from "../molecules/Explore/Explore";
+import Logout from "../molecules/Logout/Logout";
+import Login from "../molecules/Login/Login";
+import ExploreContainer from "./Explore/ExploreContainer";
+
 const Navbar: React.FC = () => {
+  const { isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
   return (
     <>
       <nav className="navbar navbar-expand-lg ">
         <NavLink className="navbar-brand" to="/">
-          <img src={require("../atoms/logo.png")} height="30" alt="" />
+          {/* <img src={require("../atoms/logo.png")} height="30" alt="" /> */}
+          <BlinkListLogo />
         </NavLink>
         <button
           className="navbar-toggler"
@@ -31,11 +41,12 @@ const Navbar: React.FC = () => {
         <div className="collapse navbar-collapse">
           <ul className="navbar-nav mr-auto">
             <div className="group__search">
-              <SearchIcon fontSize="medium"></SearchIcon>
+              {/* <SearchIcon fontSize="medium"></SearchIcon> */}
+              <SearchIconComponent />
             </div>
 
             <li>
-              <div
+              {/* <div
                 className="group__items"
                 onClick={(e) => {
                   openExplore(e);
@@ -43,18 +54,32 @@ const Navbar: React.FC = () => {
               >
                 Explore
                 <ExpandMoreIcon></ExpandMoreIcon>
-              </div>
+              </div> */}
+              <Explore openExplore={openExplore} />
             </li>
 
             <li>My Library</li>
           </ul>
-          <span className="group__items">
-            <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
-            <ExpandMoreIcon></ExpandMoreIcon>
-          </span>
+          {!isAuthenticated ? (
+            // <span onClick={() => loginWithRedirect()} className="group__items">
+            //   <Typography>Account</Typography>
+
+            //   {/* <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>  */}
+            //   <ExpandMoreIcon></ExpandMoreIcon>
+            // </span>
+            <Logout loginWithRedirect={loginWithRedirect} />
+          ) : (
+            // <span onClick={() => logout()} className="group__items">
+            //   {/* <Typography>Account</Typography> */}
+
+            //   <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
+            //   <ExpandMoreIcon></ExpandMoreIcon>
+            // </span>
+            <Login logout={logout} />
+          )}
         </div>
       </nav>
-      <div
+      {/* <div
         id="explore"
         style={{
           display: "none",
@@ -242,18 +267,19 @@ const Navbar: React.FC = () => {
             </Box>
           </Grid>
         </Grid>
-      </div>
+      </div> */}
+      <ExploreContainer openExplore={openExplore} />
     </>
   );
 };
 
 export default Navbar;
-export function openExplore(e: React.MouseEvent) {
+export function openExplore() {
   if (document.getElementById("explore")?.style.display === "none") {
     const ele = document.getElementById("explore") as HTMLElement;
     ele.style.display = "block";
     ele.style.position = "absolute";
-    console.log(e.target);
+    // console.log(e.target);
 
     ele.style.zIndex = "999";
   } else {

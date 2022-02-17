@@ -4,22 +4,9 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Booklist from "./Booklist";
+import useStyles from "../../theme";
 
-import makeStyles from "@material-ui/core/styles/makeStyles";
 import FinishedBookList from "./FinishedBookList";
-
-const useStyles = makeStyles({
-  tab: {
-    width: "auto",
-    textTransform: "none",
-    textAlign: "left",
-    fontSize: 18,
-    fontWeight: 400,
-    paddingRight: "160px",
-    paddingBottom: "16px",
-    borderStyle: "none",
-  },
-});
 
 interface TabPanelProps {
   children?: React.ReactNode;
