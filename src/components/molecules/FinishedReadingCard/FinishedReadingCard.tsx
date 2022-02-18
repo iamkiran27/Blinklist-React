@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
-import { useStyles } from "../../organisms/FinishedBookList";
+import { useStyles } from "../../organisms/FinishedBookList/FinishedBookList";
 
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ReadAgainButton from "../../atoms/ReadAgainButton/ReadAgainButton";

@@ -3,10 +3,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Booklist from "./Booklist";
-import useStyles from "../../theme";
+import Booklist from "../Booklist/Booklist";
+import useStyles from "../../../theme";
 
-import FinishedBookList from "./FinishedBookList";
+import FinishedBookList from "../FinishedBookList/FinishedBookList";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -65,6 +65,7 @@ export default function BasicTabs(props: BookData) {
 
   return (
     <Box
+      data-testid="basic_tabs"
       sx={{
         width: "1220px",
         marginTop: "100px",
@@ -79,6 +80,7 @@ export default function BasicTabs(props: BookData) {
         }}
       >
         <Tabs
+          data-testid="tabs-onChange"
           value={value}
           textColor="primary"
           indicatorColor="primary"

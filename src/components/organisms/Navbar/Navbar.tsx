@@ -10,12 +10,12 @@ import deepOrange from "@mui/material/colors/deepOrange";
 import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 
 import { useAuth0 } from "@auth0/auth0-react";
-import BlinkListLogo from "../atoms/BlinklistLogo/BlinkListLogo";
-import SearchIconComponent from "../atoms/SearchIcon/SearchIconComponent";
-import Explore from "../molecules/Explore/Explore";
-import Logout from "../molecules/Logout/Logout";
-import Login from "../molecules/Login/Login";
-import ExploreContainer from "./Explore/ExploreContainer";
+import BlinkListLogo from "../../atoms/BlinklistLogo/BlinkListLogo";
+import SearchIconComponent from "../../atoms/SearchIcon/SearchIconComponent";
+import Explore from "../../molecules/Explore/Explore";
+import Logout from "../../molecules/Logout/Logout";
+import Login from "../../molecules/Login/Login";
+import ExploreContainer from "../Explore/ExploreContainer";
 
 const Navbar: React.FC = () => {
   const { isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();

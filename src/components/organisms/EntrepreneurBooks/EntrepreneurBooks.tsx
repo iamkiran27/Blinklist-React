@@ -8,7 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { makeStyles } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
-import AddToLibraryButton from "../atoms/AddToLibraryButton/AddToLibraryButton";
+import AddToLibraryButton from "../../atoms/AddToLibraryButton/AddToLibraryButton";
 
 export const useStyles = makeStyles({
   reading: {

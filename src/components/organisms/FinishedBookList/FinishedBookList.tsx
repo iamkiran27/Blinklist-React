@@ -8,8 +8,8 @@ import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import ReadAgainButton from "../atoms/ReadAgainButton/ReadAgainButton";
-import FinishedReadingCard from "../molecules/FinishedReadingCard/FinishedReadingCard";
+import ReadAgainButton from "../../atoms/ReadAgainButton/ReadAgainButton";
+import FinishedReadingCard from "../../molecules/FinishedReadingCard/FinishedReadingCard";
 
 export const useStyles = makeStyles({
   list: {

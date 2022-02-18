@@ -1,6 +1,6 @@
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import BasicTabs from "./BasicTabs";
+import BasicTabs from "../BasicTabs/BasicTabs";
 
 type BookData = {
   booksdata: {

@@ -1,8 +1,8 @@
 import { makeStyles } from "@material-ui/core";
 import { Typography } from "@mui/material";
-import SearchBar from "../molecules/SearchBar/SearchBar";
+import SearchBar from "../../molecules/SearchBar/SearchBar";
 import { useState } from "react";
-import Books from "./EntrepreneurBooks";
+import Books from "../EntrepreneurBooks/EntrepreneurBooks";
 
 const useStyles = makeStyles({
   banner: {
@@ -111,7 +111,7 @@ const EntrepreneurPage = (props: BookData) => {
           <br /> right from start
         </Typography>
         <img
-          src={require("../../assets/banner.png")}
+          src={require("../../../assets/banner.png")}
           alt="banner"
           className={classes.bannerImg}
         />

@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/organisms/BookDetailPage.tsx</title>
+    <title>Code coverage report for src/components/organisms/BookDetailPage/BookDetailPage.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../../prettify.css" />
-    <link rel="stylesheet" href="../../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../../sort-arrow-sprite.png);
+            background-image: url(../../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/organisms</a> BookDetailPage.tsx</h1>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">src/components/organisms/BookDetailPage</a> BookDetailPage.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>6/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -285,7 +285,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -366,8 +366,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -377,10 +377,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -489,12 +489,12 @@ import { NavLink, useParams } from "react-router-dom";
 &nbsp;
 import React from "react";
 &nbsp;
-import BookTabs from "./BookTabs";
-import ReadNowButton from "../atoms/ReadNowButton/ReadNowButton";
-import FinishReadingButton from "../atoms/FinishReadingButton/FinishReadingButton";
-import KindleButton from "../atoms/KindleButton/KindleButton";
+import BookTabs from "../BookTabs/BookTabs";
+import ReadNowButton from "../../atoms/ReadNowButton/ReadNowButton";
+import FinishReadingButton from "../../atoms/FinishReadingButton/FinishReadingButton";
+import KindleButton from "../../atoms/KindleButton/KindleButton";
 &nbsp;
-export const useStyles = <span class="cstat-no" title="statement not covered" >makeStyles({</span>
+export const useStyles = makeStyles({
   main: {
     width: "1100px",
 &nbsp;
@@ -575,8 +575,8 @@ interface Handle {
   handleFinish: (id: number) =&gt; void;
 }
 &nbsp;
-const BookDetailPage = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(p</span>rops: Handle) =&gt; {</span>
-  const { id } = <span class="cstat-no" title="statement not covered" >useParams();</span>
+const BookDetailPage = (props: Handle) =&gt; {
+  const { id } = useParams();
 &nbsp;
   const bookdata: {
     id: number;
@@ -586,15 +586,15 @@ const BookDetailPage = <span class="cstat-no" title="statement not covered" ><sp
     time: string;
     finished: boolean;
     added: boolean;
-  } = <span class="cstat-no" title="statement not covered" >props.booksdata.filter(<span class="fstat-no" title="function not covered" >(b</span>ook) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    return book.id.toString() === id;</span>
+  } = props.booksdata.filter((book) =&gt; {
+    return book.id.toString() === id;
   })[0];
-  const [active, setActive] = <span class="cstat-no" title="statement not covered" >React.useState(bookdata.finished);</span>
+  const [active, setActive] = React.useState(bookdata.finished);
 &nbsp;
   const classes = <span class="cstat-no" title="statement not covered" >useStyles();</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;&gt;
-      &lt;div className={classes.main}&gt;
+      &lt;div className={classes.main} data-testid="book-detail-page"&gt;
         &lt;Typography variant="body2" className={classes.authorTypo}&gt;
           Get the key ideas from
         &lt;/Typography&gt;
@@ -697,16 +697,16 @@ export default BookDetailPage;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Feb 17 2022 20:33:49 GMT+0530 (India Standard Time)
+                at Fri Feb 18 2022 08:59:51 GMT+0530 (India Standard Time)
             </div>
-        <script src="../../../prettify.js"></script>
+        <script src="../../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../../sorter.js"></script>
-        <script src="../../../block-navigation.js"></script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
     </body>
 </html>
     

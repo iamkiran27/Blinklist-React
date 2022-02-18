@@ -1,7 +1,6 @@
 import React from "react";
 import { Avatar } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import deepOrange from "@mui/material/colors/deepOrange";
 
 interface LoginI {
   logout: Function;
@@ -9,9 +8,9 @@ interface LoginI {
 
 function Login(props: LoginI) {
   return (
-    <div data-testid="login">
-      <span onClick={() => props.logout()} className="group__items">
-        <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
+    <div data-testid="login" onClick={() => props.logout()}>
+      <span className="group__items">
+        <Avatar sx={{ bgcolor: "orange" }}>K</Avatar>
         <ExpandMoreIcon></ExpandMoreIcon>
       </span>
     </div>

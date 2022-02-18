@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 
-import { useStyles } from "../../organisms/EntrepreneurBooks";
+import { useStyles } from "../../organisms/EntrepreneurBooks/EntrepreneurBooks";
 
 const AddToLibraryButton = () => {
   const style = useStyles();

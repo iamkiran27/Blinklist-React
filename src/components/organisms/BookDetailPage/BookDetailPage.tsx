@@ -6,10 +6,10 @@ import { NavLink, useParams } from "react-router-dom";
 
 import React from "react";
 
-import BookTabs from "./BookTabs";
-import ReadNowButton from "../atoms/ReadNowButton/ReadNowButton";
-import FinishReadingButton from "../atoms/FinishReadingButton/FinishReadingButton";
-import KindleButton from "../atoms/KindleButton/KindleButton";
+import BookTabs from "../BookTabs/BookTabs";
+import ReadNowButton from "../../atoms/ReadNowButton/ReadNowButton";
+import FinishReadingButton from "../../atoms/FinishReadingButton/FinishReadingButton";
+import KindleButton from "../../atoms/KindleButton/KindleButton";
 
 export const useStyles = makeStyles({
   main: {
@@ -111,7 +111,7 @@ const BookDetailPage = (props: Handle) => {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.main}>
+      <div className={classes.main} data-testid="book-detail-page">
         <Typography variant="body2" className={classes.authorTypo}>
           Get the key ideas from
         </Typography>

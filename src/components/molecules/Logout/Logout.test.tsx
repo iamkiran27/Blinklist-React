@@ -12,7 +12,5 @@ test("Render SearchIcon Button", () => {
     />
   );
   expect(screen.getByTestId("logout")).toBeInTheDocument();
-  expect(screen.getByTestId("logout-span")).toBeInTheDocument();
-
-  fireEvent.click(screen.getByTestId("logout-span"), { button: 0 });
+  fireEvent.click(screen.getByTestId("logout"), { button: 0 });
 });

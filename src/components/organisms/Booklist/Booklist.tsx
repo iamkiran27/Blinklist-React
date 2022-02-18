@@ -1,5 +1,5 @@
 import makeStyles from "@material-ui/core/styles/makeStyles";
-
+import React from "react";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
@@ -81,12 +81,12 @@ type BookData = {
 const Booklist = (props: BookData) => {
   const style = useStyles();
   return (
-    <div className={style.list}>
+    <div className={style.list} data-testid="book-list">
       <div className="row">
         {props.books.map((book) => {
           if (!book.finished && book.added) {
             return (
-              <div>
+              <div data-testid="book-list-card">
                 <Card
                   sx={{
                     maxWidth: "300px",
@@ -130,6 +130,7 @@ const Booklist = (props: BookData) => {
                       <MoreHorizIcon></MoreHorizIcon>
                     </span>
                     <Button
+                      data-testid="book-list-button"
                       onClick={(e) => {
                         props.handleFinishReading(book.id);
                       }}

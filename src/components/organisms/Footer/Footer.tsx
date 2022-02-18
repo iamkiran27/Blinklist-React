@@ -1,7 +1,7 @@
 import "./Footer.css";
 import { Box, Container, Grid, Link, Theme, Typography } from "@mui/material";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import BlinkListLogo from "../atoms/BlinklistLogo/BlinkListLogo";
+import BlinkListLogo from "../../atoms/BlinklistLogo/BlinkListLogo";
 
 const useStyles = makeStyles((theme: Theme) => ({
   lnkstl: {

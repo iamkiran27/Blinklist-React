@@ -12,4 +12,5 @@ test("Render SearchIcon Button", () => {
     />
   );
   expect(screen.getByTestId("login")).toBeInTheDocument();
+  fireEvent.click(screen.getByTestId("login"), { button: 0 });
 });

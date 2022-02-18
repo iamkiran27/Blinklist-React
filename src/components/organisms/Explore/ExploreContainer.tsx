@@ -11,6 +11,7 @@ interface ExploreI {
 function ExploreContainer(props: ExploreI) {
   return (
     <div
+      data-testid="explore-container"
       id="explore"
       style={{
         display: "none",
@@ -25,7 +26,11 @@ function ExploreContainer(props: ExploreI) {
             <Typography color="#116BE9">Explore by category</Typography>
           </Box>
           <Box marginTop={3} paddingTop={2}>
-            <NavLink onClick={props.openExplore} to="/entrepreneur">
+            <NavLink
+              data-testid="explore-nav-link"
+              onClick={props.openExplore}
+              to="/entrepreneur"
+            >
               <Box>
                 <Grid container>
                   <Grid item>
