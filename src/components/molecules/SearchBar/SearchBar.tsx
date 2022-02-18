@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import InputAdornment from "@mui/material/InputAdornment";
 
@@ -11,17 +11,14 @@ type FilterData = {
 };
 
 const SearchBar = (props: FilterData) => {
-  const [val, setVal] = React.useState("");
   return (
     <TextField
       data-testid="inputField"
       color="info"
-      value={val}
       id="input-with-icon-textfield"
       placeholder="search by author"
       onChange={(e) => {
         props.filter(e.target.value);
-        setVal(e.target.value);
       }}
       InputProps={{
         startAdornment: (

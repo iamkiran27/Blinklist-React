@@ -1,12 +1,8 @@
 import React from "react";
 
-// interface LogoPath {
-//   path: string;
-// }
-
 function BlinkListLogo(props: any) {
   return (
-    <div>
+    <div data-testid="logo">
       <a className="navbar-brand">
         <img src={require("../logo.png")} height="30" alt="" />
       </a>

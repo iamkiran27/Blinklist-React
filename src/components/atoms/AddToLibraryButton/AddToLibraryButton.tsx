@@ -8,6 +8,7 @@ const AddToLibraryButton = () => {
 
   return (
     <Button
+      role="addToLibrary"
       sx={{
         textTransform: "none",
 

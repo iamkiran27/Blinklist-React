@@ -12,6 +12,7 @@ interface FinishButtonProps {
 const FinishReadingButton = (props: FinishButtonProps) => {
   return (
     <Button
+      role="finishReading"
       disabled={props.disabled ? true : false}
       onClick={(e) => {
         console.log("bookdata id : ", props.bookId);

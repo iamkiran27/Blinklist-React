@@ -7,6 +7,7 @@ const KindleButton = () => {
   const classes = useStyles();
   return (
     <Button
+      role="kindleButton"
       sx={{
         textTransform: "none",
         color: "gray",
