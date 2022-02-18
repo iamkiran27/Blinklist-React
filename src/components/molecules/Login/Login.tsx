@@ -9,7 +9,7 @@ interface LoginI {
 
 function Login(props: LoginI) {
   return (
-    <div>
+    <div data-testid="login">
       <span onClick={() => props.logout()} className="group__items">
         <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
         <ExpandMoreIcon></ExpandMoreIcon>

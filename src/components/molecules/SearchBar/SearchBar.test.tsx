@@ -4,9 +4,17 @@ import SearchBar from "./SearchBar";
 import "@testing-library/jest-dom";
 
 test("Render SearchIcon Button", () => {
-  render(<SearchBar filter={() => console.log("input field entered.")} />);
+  render(
+    <SearchBar
+      filter={() => console.log("input field entered.")}
+      val={"abc"}
+      setVal={() => {
+        console.log("Handling text inputs.");
+      }}
+    />
+  );
   expect(screen.getByTestId("inputField")).toBeInTheDocument();
   fireEvent.change(screen.getByTestId("inputField"), {
-    target: { value: "abc" },
+    // target: { value: "abc" },
   });
 });

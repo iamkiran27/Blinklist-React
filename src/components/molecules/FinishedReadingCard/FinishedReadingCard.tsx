@@ -28,7 +28,7 @@ interface FinishedBookI {
 function FinishedReadingCard(props: FinishedBookI) {
   const style = useStyles();
   return (
-    <div>
+    <div data-testid="finish-reading-card">
       <Card
         sx={{
           maxWidth: "300px",

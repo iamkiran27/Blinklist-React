@@ -9,6 +9,7 @@ interface ExploreInterface {
 function Explore(props: ExploreInterface) {
   return (
     <div
+      data-testid="explore"
       className="group__items"
       onClick={(e) => {
         props.openExplore(e);

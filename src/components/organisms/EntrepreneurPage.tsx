@@ -86,6 +86,7 @@ const EntrepreneurPage = (props: BookData) => {
   const [data, setData] = useState(props.booksdata);
   const classes = useStyles();
 
+  const [val, setVal] = useState("");
   function FilterData(search: string) {
     console.log(search);
     const filteredBooks = props.booksdata.filter((book) => {
@@ -116,7 +117,7 @@ const EntrepreneurPage = (props: BookData) => {
         />
       </div>
       <div className={classes.search}>
-        <SearchBar filter={FilterData} />
+        <SearchBar val={val} setVal={setVal} filter={FilterData} />
       </div>
       <div className={classes.content}>
         <Typography variant="h5">Trending blinks</Typography>

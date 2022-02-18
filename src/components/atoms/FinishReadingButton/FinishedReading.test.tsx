@@ -9,7 +9,7 @@ test("Render SearchIcon Button", () => {
   render(
     <MemoryRouter>
       <FinishReadingButton
-        disabled={false}
+        disabled={true ? true : false}
         bookId={0}
         setActive={() => {
           console.log("Finish reading button state is managed");

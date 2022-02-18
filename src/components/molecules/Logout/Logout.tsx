@@ -8,8 +8,12 @@ interface LogoutI {
 
 function Logout(props: LogoutI) {
   return (
-    <div>
-      <span onClick={() => props.loginWithRedirect()} className="group__items">
+    <div data-testid="logout">
+      <span
+        data-testid="logout-span"
+        onClick={() => props.loginWithRedirect()}
+        className="group__items"
+      >
         <Typography>Account</Typography>
 
         <ExpandMoreIcon></ExpandMoreIcon>
