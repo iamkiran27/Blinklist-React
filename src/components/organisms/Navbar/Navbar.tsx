@@ -1,13 +1,7 @@
-import { Avatar, Box, Grid } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import React from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import "./Navbar.css";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Typography from "@mui/material/Typography";
-import deepOrange from "@mui/material/colors/deepOrange";
 
-import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
+import "./Navbar.css";
 
 import { useAuth0 } from "@auth0/auth0-react";
 import BlinkListLogo from "../../atoms/BlinklistLogo/BlinkListLogo";
@@ -18,10 +12,10 @@ import Login from "../../molecules/Login/Login";
 import ExploreContainer from "../Explore/ExploreContainer";
 
 const Navbar: React.FC = () => {
-  const { isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   return (
     <>
-      <nav className="navbar navbar-expand-lg ">
+      <nav className="navbar navbar-expand-lg " data-testid="navbar-test">
         <NavLink className="navbar-brand" to="/">
           {/* <img src={require("../atoms/logo.png")} height="30" alt="" /> */}
           <BlinkListLogo />

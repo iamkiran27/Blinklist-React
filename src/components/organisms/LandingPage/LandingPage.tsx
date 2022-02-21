@@ -43,7 +43,7 @@ function LandingPage(props: BookData) {
 
   return (
     <>
-      <div className={style.landing}>
+      <div className={style.landing} data-testid="landing-page">
         <h3 className={style.heading}>My Library</h3>
 
         <BasicTabs

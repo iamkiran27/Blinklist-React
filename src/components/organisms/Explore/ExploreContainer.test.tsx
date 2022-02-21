@@ -15,5 +15,6 @@ test("Render SearchIcon Button", () => {
     </MemoryRouter>
   );
   expect(screen.getByTestId("explore-container")).toBeInTheDocument();
-  fireEvent.click(screen.getByTestId("explore-nav-link"), { button: 0 });
+  expect(screen.getByTestId("exploreNavButton")).toBeInTheDocument();
+  fireEvent.click(screen.getByTestId("exploreNavButton"), { button: 0 });
 });

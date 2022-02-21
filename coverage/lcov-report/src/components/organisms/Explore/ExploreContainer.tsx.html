@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
@@ -273,7 +273,36 @@
 <a name='L208'></a><a href='#L208'>208</a>
 <a name='L209'></a><a href='#L209'>209</a>
 <a name='L210'></a><a href='#L210'>210</a>
-<a name='L211'></a><a href='#L211'>211</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -470,27 +499,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { MouseEventHandler } from "react";
-import { Box, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
 import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 &nbsp;
 interface ExploreI {
-  openExplore: MouseEventHandler&lt;HTMLAnchorElement&gt;;
+  openExplore: Function;
 }
 &nbsp;
 function ExploreContainer(props: ExploreI) {
@@ -511,23 +527,31 @@ function ExploreContainer(props: ExploreI) {
             &lt;Typography color="#116BE9"&gt;Explore by category&lt;/Typography&gt;
           &lt;/Box&gt;
           &lt;Box marginTop={3} paddingTop={2}&gt;
-            &lt;NavLink
-              data-testid="explore-nav-link"
-              onClick={props.openExplore}
-              to="/entrepreneur"
+            &lt;Button
+              // hidden={true}
+              data-testid="exploreNavButton"
+              onClick={(e) =&gt; {
+                props.openExplore();
+              }}
             &gt;
-              &lt;Box&gt;
-                &lt;Grid container&gt;
-                  &lt;Grid item&gt;
-                    &lt;RocketOutlinedIcon&gt;&lt;/RocketOutlinedIcon&gt;
-                  &lt;/Grid&gt;
+              &lt;NavLink
+                // data-testid="explore-nav-link"
+                // onClick={props.openExplore}
+                to="/entrepreneur"
+              &gt;
+                &lt;Box&gt;
+                  &lt;Grid container&gt;
+                    &lt;Grid item&gt;
+                      &lt;RocketOutlinedIcon&gt;&lt;/RocketOutlinedIcon&gt;
+                    &lt;/Grid&gt;
 &nbsp;
-                  &lt;Grid item&gt;
-                    &lt;Typography&gt;Entreprenership&lt;/Typography&gt;
+                    &lt;Grid item&gt;
+                      &lt;Typography&gt;Entreprenership&lt;/Typography&gt;
+                    &lt;/Grid&gt;
                   &lt;/Grid&gt;
-                &lt;/Grid&gt;
-              &lt;/Box&gt;
-            &lt;/NavLink&gt;
+                &lt;/Box&gt;
+              &lt;/NavLink&gt;
+            &lt;/Button&gt;
 &nbsp;
             &lt;Box&gt;
               &lt;Grid container&gt;
@@ -700,7 +724,7 @@ export default ExploreContainer;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Feb 21 2022 07:50:58 GMT+0530 (India Standard Time)
+                at Mon Feb 21 2022 08:25:12 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

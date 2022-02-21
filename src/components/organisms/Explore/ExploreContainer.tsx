@@ -1,11 +1,11 @@
 import React, { MouseEventHandler } from "react";
-import { Box, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
 import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 
 interface ExploreI {
-  openExplore: MouseEventHandler<HTMLAnchorElement>;
+  openExplore: Function;
 }
 
 function ExploreContainer(props: ExploreI) {
@@ -26,23 +26,31 @@ function ExploreContainer(props: ExploreI) {
             <Typography color="#116BE9">Explore by category</Typography>
           </Box>
           <Box marginTop={3} paddingTop={2}>
-            <NavLink
-              data-testid="explore-nav-link"
-              onClick={props.openExplore}
-              to="/entrepreneur"
+            <Button
+              // hidden={true}
+              data-testid="exploreNavButton"
+              onClick={(e) => {
+                props.openExplore();
+              }}
             >
-              <Box>
-                <Grid container>
-                  <Grid item>
-                    <RocketOutlinedIcon></RocketOutlinedIcon>
-                  </Grid>
+              <NavLink
+                // data-testid="explore-nav-link"
+                // onClick={props.openExplore}
+                to="/entrepreneur"
+              >
+                <Box>
+                  <Grid container>
+                    <Grid item>
+                      <RocketOutlinedIcon></RocketOutlinedIcon>
+                    </Grid>
 
-                  <Grid item>
-                    <Typography>Entreprenership</Typography>
+                    <Grid item>
+                      <Typography>Entreprenership</Typography>
+                    </Grid>
                   </Grid>
-                </Grid>
-              </Box>
-            </NavLink>
+                </Box>
+              </NavLink>
+            </Button>
 
             <Box>
               <Grid container>
