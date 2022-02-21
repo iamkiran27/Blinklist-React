@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645414244144" clover="3.2.0">
-  <project timestamp="1645414244145" name="All files">
-    <metrics statements="102" coveredstatements="84" conditionals="26" coveredconditionals="20" methods="46" coveredmethods="39" elements="174" coveredelements="143" complexity="0" loc="102" ncloc="102" packages="24" files="24" classes="24"/>
+<coverage generated="1645415740178" clover="3.2.0">
+  <project timestamp="1645415740178" name="All files">
+    <metrics statements="102" coveredstatements="84" conditionals="26" coveredconditionals="20" methods="46" coveredmethods="39" elements="174" coveredelements="143" complexity="0" loc="102" ncloc="102" packages="25" files="25" classes="25"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="theme.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/theme.tsx">
@@ -67,6 +67,19 @@
       <file name="SearchIconComponent.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/atoms/SearchIcon/SearchIconComponent.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.helperFunctions">
+      <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="helper.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/helperFunctions/helper.tsx">
+        <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecules.Explore">
@@ -197,8 +210,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="ExploreContainer.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/organisms/Explore/ExploreContainer.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.organisms.FinishedBookList">
@@ -233,19 +246,12 @@
       </file>
     </package>
     <package name="src.components.organisms.Navbar">
-      <metrics statements="10" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="Navbar.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/organisms/Navbar/Navbar.tsx">
-        <metrics statements="10" coveredstatements="3" conditionals="4" coveredconditionals="1" methods="2" coveredmethods="1"/>
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="2" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="263" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="264" count="0" type="stmt"/>
-        <line num="265" count="0" type="stmt"/>
-        <line num="266" count="0" type="stmt"/>
-        <line num="269" count="0" type="stmt"/>
-        <line num="271" count="0" type="stmt"/>
-        <line num="272" count="0" type="stmt"/>
       </file>
     </package>
   </project>

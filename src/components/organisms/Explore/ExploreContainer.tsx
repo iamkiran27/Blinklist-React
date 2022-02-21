@@ -26,16 +26,19 @@ function ExploreContainer(props: ExploreI) {
             <Typography color="#116BE9">Explore by category</Typography>
           </Box>
           <Box marginTop={3} paddingTop={2}>
-            <Button
+            {/* <Button
               // hidden={true}
               data-testid="exploreNavButton"
               onClick={(e) => {
                 props.openExplore();
               }}
-            >
+            > */}
+            <Typography>
               <NavLink
-                // data-testid="explore-nav-link"
-                // onClick={props.openExplore}
+                data-testid="exploreNavButton"
+                onClick={() => {
+                  props.openExplore();
+                }}
                 to="/entrepreneur"
               >
                 <Box>
@@ -44,13 +47,12 @@ function ExploreContainer(props: ExploreI) {
                       <RocketOutlinedIcon></RocketOutlinedIcon>
                     </Grid>
 
-                    <Grid item>
-                      <Typography>Entreprenership</Typography>
-                    </Grid>
+                    <Grid item>Entreprenership</Grid>
                   </Grid>
                 </Box>
               </NavLink>
-            </Button>
+            </Typography>
+            {/* </Button> */}
 
             <Box>
               <Grid container>

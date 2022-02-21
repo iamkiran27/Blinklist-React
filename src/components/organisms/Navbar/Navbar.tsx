@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-
+import { openExplore } from "../../helperFunctions/helper";
 import "./Navbar.css";
 
 import { useAuth0 } from "@auth0/auth0-react";
@@ -46,20 +46,8 @@ const Navbar: React.FC = () => {
             <li>My Library</li>
           </ul>
           {!isAuthenticated ? (
-            // <span onClick={() => loginWithRedirect()} className="group__items">
-            //   <Typography>Account</Typography>
-
-            //   {/* <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>  */}
-            //   <ExpandMoreIcon></ExpandMoreIcon>
-            // </span>
             <Logout loginWithRedirect={loginWithRedirect} />
           ) : (
-            // <span onClick={() => logout()} className="group__items">
-            //   {/* <Typography>Account</Typography> */}
-
-            //   <Avatar sx={{ bgcolor: deepOrange[500] }}>K</Avatar>
-            //   <ExpandMoreIcon></ExpandMoreIcon>
-            // </span>
             <Login logout={logout} />
           )}
         </div>
@@ -259,16 +247,16 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-export function openExplore() {
-  if (document.getElementById("explore")?.style.display === "none") {
-    const ele = document.getElementById("explore") as HTMLElement;
-    ele.style.display = "block";
-    ele.style.position = "absolute";
-    // console.log(e.target);
+// export function openExplore() {
+//   if (document.getElementById("explore")?.style.display === "none") {
+//     const ele = document.getElementById("explore") as HTMLElement;
+//     ele.style.display = "block";
+//     ele.style.position = "absolute";
+//     // console.log(e.target);
 
-    ele.style.zIndex = "999";
-  } else {
-    const ele = document.getElementById("explore") as HTMLElement;
-    ele.style.display = "none";
-  }
-}
+//     ele.style.zIndex = "999";
+//   } else {
+//     const ele = document.getElementById("explore") as HTMLElement;
+//     ele.style.display = "none";
+//   }
+// }
