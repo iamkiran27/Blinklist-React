@@ -35,6 +35,4 @@ test("Render Entrepreneur Books", () => {
     </MemoryRouter>
   );
   expect(screen.getByTestId("entrepreneur-page")).toBeInTheDocument();
-  //   expect(screen.getByTestId("entrepreneur-list-card")).toBeInTheDocument();
-  //   expect(screen.getByTestId("no-books")).toBeInTheDocument();
 });

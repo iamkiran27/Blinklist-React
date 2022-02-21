@@ -40,15 +40,6 @@ const Navbar: React.FC = () => {
             </div>
 
             <li>
-              {/* <div
-                className="group__items"
-                onClick={(e) => {
-                  openExplore(e);
-                }}
-              >
-                Explore
-                <ExpandMoreIcon></ExpandMoreIcon>
-              </div> */}
               <Explore openExplore={openExplore} />
             </li>
 

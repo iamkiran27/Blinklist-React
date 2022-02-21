@@ -69,7 +69,7 @@ export default function EntrepreneurBooks(props: BooksData) {
           return (
             <Grid item xs={2} sm={3} md={4} lg={4} key={book.id}>
               <Card
-                data-testid="entrepreneur-list-card"
+                // data-testid="entrepreneur-list-card"
                 sx={{
                   maxWidth: "300px",
                   marginBottom: 5,
