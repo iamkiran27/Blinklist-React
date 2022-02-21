@@ -3,7 +3,7 @@ import { Button } from "@mui/material";
 
 interface ReadAgainProps {
   handleReadAgain: Function;
-  boodId: number;
+  bookId: number;
 }
 
 function ReadAgainButton(props: ReadAgainProps) {
@@ -11,7 +11,7 @@ function ReadAgainButton(props: ReadAgainProps) {
     <Button
       role="readAgainButton"
       onClick={(e) => {
-        props.handleReadAgain(props.boodId);
+        props.handleReadAgain(props.bookId);
       }}
       sx={{ textTransform: "none", color: "blue" }}
       variant="text"

@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-
+import React from "react";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { makeStyles } from "@material-ui/core";
@@ -49,7 +49,7 @@ type BooksData = {
     finished: boolean;
     added: boolean;
   }[];
-  setData: Function;
+  // setData: Function;
   handleFinish: (id: number) => void;
 };
 
@@ -57,6 +57,7 @@ export default function EntrepreneurBooks(props: BooksData) {
   const style = useStyles();
   return (
     <Grid
+      data-testid="entrepreneur-books"
       container
       direction="row"
       alignItems="center"
@@ -68,6 +69,7 @@ export default function EntrepreneurBooks(props: BooksData) {
           return (
             <Grid item xs={2} sm={3} md={4} lg={4} key={book.id}>
               <Card
+                data-testid="entrepreneur-list-card"
                 sx={{
                   maxWidth: "300px",
                   marginBottom: 5,
@@ -84,11 +86,10 @@ export default function EntrepreneurBooks(props: BooksData) {
                   alt="Book"
                 />
                 <CardContent style={{}}>
-                  <Link color="black" underline="hover">
-                    <Typography component="div">
-                      <NavLink to={`/book/${book.id}`}>{book.name}</NavLink>
-                    </Typography>
-                  </Link>
+                  <NavLink to={`/book/${book.id}`}>
+                    <Typography>{book.name}</Typography>
+                  </NavLink>
+
                   <Typography>{book.author}</Typography>
                   <Grid container>
                     <Grid item>
@@ -107,18 +108,6 @@ export default function EntrepreneurBooks(props: BooksData) {
                 {book.added ? (
                   <Typography className={style.reading} />
                 ) : (
-                  // <Button
-                  //   sx={{
-                  //     textTransform: "none",
-
-                  //     color: "#0365F2",
-                  //     border: "none",
-                  //   }}
-                  //   className={style.button}
-                  //   variant="text"
-                  // >
-                  //   + Add to library
-                  // </Button>
                   <AddToLibraryButton />
                 )}
               </Card>
@@ -126,7 +115,7 @@ export default function EntrepreneurBooks(props: BooksData) {
           );
         })
       ) : (
-        <Grid item>
+        <Grid item data-testid="no-books">
           <Typography variant="h4" color="tomato">
             No books found !!
           </Typography>

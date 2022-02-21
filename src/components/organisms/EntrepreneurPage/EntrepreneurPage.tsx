@@ -3,6 +3,7 @@ import { Typography } from "@mui/material";
 import SearchBar from "../../molecules/SearchBar/SearchBar";
 import { useState } from "react";
 import Books from "../EntrepreneurBooks/EntrepreneurBooks";
+import React from "react";
 
 const useStyles = makeStyles({
   banner: {
@@ -100,7 +101,7 @@ const EntrepreneurPage = (props: BookData) => {
 
   return (
     <>
-      <div className={classes.banner}>
+      <div className={classes.banner} data-testid="entrepreneur-page">
         <Typography className={classes.heading}>
           Explore Books on <br />
           entreprenship
@@ -124,7 +125,7 @@ const EntrepreneurPage = (props: BookData) => {
 
         <Books
           booksdata={data}
-          setData={setData}
+          // setData={setData}
           handleFinish={props.handleFinish}
         />
       </div>

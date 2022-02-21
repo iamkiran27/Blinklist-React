@@ -1,14 +1,6 @@
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import React from "react";
 
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import ReadAgainButton from "../../atoms/ReadAgainButton/ReadAgainButton";
 import FinishedReadingCard from "../../molecules/FinishedReadingCard/FinishedReadingCard";
 
 export const useStyles = makeStyles({
@@ -76,78 +68,11 @@ const FinishedBookList = (props: FinishedBookData) => {
   console.log("data in finished tab ", props.books);
   const style = useStyles();
   return (
-    <div className={style.list}>
+    <div className={style.list} data-testid="finish-div">
       <div className="row">
         {props.books.map((book) => {
           if (book.finished) {
             return (
-              // <div>
-              //   <Card
-              //     sx={{
-              //       maxWidth: "300px",
-              //       marginBottom: 5,
-              //       marginLeft: 8,
-              //       borderRadius: "10px",
-              //     }}
-              //     key={book.id}
-              //   >
-              //     <CardMedia
-              //       component="img"
-              //       height="300px"
-              //       image={book.image}
-              //       alt="Book"
-              //     />
-              //     <CardContent>
-              //       <Typography
-              //         gutterBottom
-              //         component="div"
-              //         className={style.bookName}
-              //       >
-              //         {book.name}
-              //       </Typography>
-
-              //       <Typography className={style.authorName}>
-              //         {book.author}
-              //       </Typography>
-              //       <Grid container className={style.gridMain}>
-              //         <Grid item className={style.gridItem}>
-              //           <AccessTimeIcon
-              //             sx={{ height: "16.67px", width: "16.67px" }}
-              //           ></AccessTimeIcon>
-              //         </Grid>
-              //         <Grid item className={style.gridItem}>
-              //           <Typography className={style.readTypo}>
-              //             {book.time}
-              //           </Typography>
-              //         </Grid>
-              //       </Grid>
-              //       <Grid
-              //         container
-              //         justifyContent="center"
-              //         direction="row"
-              //         alignContent="center"
-              //       >
-              //         <Grid item justifyContent="center">
-              //           {/* <Button
-              //             onClick={(e) => {
-              //               props.handleReadAgain(book.id);
-              //             }}
-              //             sx={{ textTransform: "none", color: "blue" }}
-              //             variant="text"
-              //           >
-              //             Read again
-              //           </Button> */}
-              //           <ReadAgainButton
-              //             handleReadAgain={props.handleReadAgain}
-              //             boodId={book.id}
-              //           />
-              //         </Grid>
-              //       </Grid>
-              //     </CardContent>
-
-              //     <Typography className={style.readingBar} />
-              //   </Card>
-              // </div>
               <FinishedReadingCard
                 book={book}
                 handleReadAgain={props.handleReadAgain}

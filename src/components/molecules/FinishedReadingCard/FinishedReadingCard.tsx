@@ -73,7 +73,7 @@ function FinishedReadingCard(props: FinishedBookI) {
             <Grid item justifyContent="center">
               <ReadAgainButton
                 handleReadAgain={props.handleReadAgain}
-                boodId={props.book.id}
+                bookId={props.book.id}
               />
             </Grid>
           </Grid>

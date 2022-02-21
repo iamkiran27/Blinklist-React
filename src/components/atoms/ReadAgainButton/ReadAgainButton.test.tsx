@@ -6,8 +6,10 @@ import "@testing-library/jest-dom";
 test("Render SearchIcon Button", () => {
   render(
     <ReadAgainButton
-      handleReadAgain={() => console.log("Read again button clicked")}
-      boodId={0}
+      handleReadAgain={(bookId = 0) =>
+        console.log("Read again button clicked", bookId)
+      }
+      bookId={4}
     />
   );
   expect(screen.getByRole("readAgainButton")).toBeInTheDocument();

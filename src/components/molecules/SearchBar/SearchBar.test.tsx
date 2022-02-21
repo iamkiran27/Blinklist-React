@@ -6,15 +6,15 @@ import "@testing-library/jest-dom";
 test("Render SearchIcon Button", () => {
   render(
     <SearchBar
-      filter={() => console.log("input field entered.")}
+      filter={(val = "") => console.log("input field entered.", val)}
       val={"abc"}
-      setVal={() => {
-        console.log("Handling text inputs.");
+      setVal={(val = "") => {
+        console.log("Handling text inputs.", val);
       }}
     />
   );
   expect(screen.getByTestId("inputField")).toBeInTheDocument();
-  fireEvent.change(screen.getByTestId("inputField"), {
-    // target: { value: "abc" },
-  });
+  // fireEvent.change(screen.getByTestId("inputField"), {
+  //   target: { value: "abc" },
+  // });
 });

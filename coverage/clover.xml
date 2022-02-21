@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645155158965" clover="3.2.0">
-  <project timestamp="1645155158965" name="All files">
-    <metrics statements="75" coveredstatements="51" conditionals="20" coveredconditionals="8" methods="36" coveredmethods="25" elements="131" coveredelements="84" complexity="0" loc="75" ncloc="75" packages="20" files="20" classes="20"/>
+<coverage generated="1645410058976" clover="3.2.0">
+  <project timestamp="1645410058976" name="All files">
+    <metrics statements="85" coveredstatements="72" conditionals="22" coveredconditionals="17" methods="39" coveredmethods="33" elements="146" coveredelements="122" complexity="0" loc="85" ncloc="85" packages="21" files="21" classes="21"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="theme.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/theme.tsx">
@@ -14,9 +14,9 @@
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="AddToLibraryButton.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/atoms/AddToLibraryButton/AddToLibraryButton.tsx">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.components.atoms.BlinklistLogo">
@@ -50,7 +50,7 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="ReadAgainButton.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/atoms/ReadAgainButton/ReadAgainButton.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="10" count="2" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
       </file>
     </package>
@@ -81,8 +81,8 @@
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="FinishedReadingCard.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/molecules/FinishedReadingCard/FinishedReadingCard.tsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecules.Login">
@@ -105,8 +105,8 @@
       <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="SearchBar.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/molecules/SearchBar/SearchBar.tsx">
         <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
       </file>
@@ -140,18 +140,18 @@
       </file>
     </package>
     <package name="src.components.organisms.BookTabs">
-      <metrics statements="9" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
       <file name="BookTabs.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/organisms/BookTabs/BookTabs.tsx">
-        <metrics statements="9" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
+        <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.organisms.Booklist">
@@ -168,13 +168,29 @@
       </file>
     </package>
     <package name="src.components.organisms.EntrepreneurBooks">
-      <metrics statements="4" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
       <file name="EntrepreneurBooks.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/organisms/EntrepreneurBooks/EntrepreneurBooks.tsx">
-        <metrics statements="4" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
+        <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="69" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.organisms.EntrepreneurPage">
+      <metrics statements="10" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <file name="EntrepreneurPage.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/organisms/EntrepreneurPage/EntrepreneurPage.tsx">
+        <metrics statements="10" coveredstatements="6" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.organisms.Explore">
@@ -185,16 +201,16 @@
       </file>
     </package>
     <package name="src.components.organisms.FinishedBookList">
-      <metrics statements="7" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="FinishedBookList.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/organisms/FinishedBookList/FinishedBookList.tsx">
-        <metrics statements="7" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="75" count="2" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
-        <line num="78" count="0" type="stmt"/>
-        <line num="82" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="83" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="67" count="3" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="74" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="75" count="1" type="stmt"/>
       </file>
     </package>
   </project>

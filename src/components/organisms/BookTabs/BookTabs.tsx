@@ -70,6 +70,7 @@ export default function BookTabs() {
 
   return (
     <Box
+      data-testid="book-tabs"
       sx={{
         width: "680px",
         marginTop: "50px",
@@ -85,6 +86,7 @@ export default function BookTabs() {
         }}
       >
         <Tabs
+          data-testid="book-tabs-onChange"
           value={value}
           textColor="primary"
           indicatorColor="primary"
