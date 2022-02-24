@@ -15,6 +15,7 @@ type FilterData = {
 const SearchBar = (props: FilterData) => {
   return (
     <TextField
+      fullWidth={true}
       data-testid="inputField"
       color="info"
       value={props.val === " " ? null : props.val}

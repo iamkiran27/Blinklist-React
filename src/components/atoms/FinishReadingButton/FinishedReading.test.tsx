@@ -20,6 +20,6 @@ test("Render SearchIcon Button", () => {
       />
     </MemoryRouter>
   );
-  expect(screen.getByRole("finishReading")).toBeInTheDocument();
-  fireEvent.click(screen.getByRole("finishReading"), { button: 0 });
+  expect(screen.getByTestId("finishReading")).toBeInTheDocument();
+  fireEvent.click(screen.getByTestId("finishReading"), { button: 0 });
 });

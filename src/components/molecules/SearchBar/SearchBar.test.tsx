@@ -14,7 +14,7 @@ test("Render SearchIcon Button", () => {
     />
   );
   expect(screen.getByTestId("inputField")).toBeInTheDocument();
-  // fireEvent.change(screen.getByTestId("inputField"), {
-  //   target: { value: "abc" },
-  // });
+  fireEvent.change(screen.getByTestId("inputField"), {
+    // target: { value: "abc" },
+  });
 });

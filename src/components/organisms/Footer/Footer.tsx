@@ -35,7 +35,7 @@ export default function Footer() {
         <Container maxWidth="lg">
           <Grid container spacing={5}>
             <Grid item xs={12} sm={5}>
-              <Box borderBottom={2}>
+              <Box>
                 <BlinkListLogo />
               </Box>
               <Box>
@@ -47,7 +47,7 @@ export default function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={2}>
-              <Box marginTop={2} borderBottom={2} className={classes.lnkb}>
+              <Box marginTop={2} className={classes.lnkb}>
                 Editorial
               </Box>
               <br />
@@ -78,7 +78,7 @@ export default function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={2}>
-              <Box marginTop={2} borderBottom={2} className={classes.lnkb}>
+              <Box marginTop={2} className={classes.lnkb}>
                 Useful Links
               </Box>{" "}
               <br />
@@ -115,7 +115,7 @@ export default function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={2}>
-              <Box marginTop={2} borderBottom={2} className={classes.lnkb}>
+              <Box marginTop={2} className={classes.lnkb}>
                 Company
               </Box>{" "}
               <br />

@@ -16,8 +16,9 @@ const useStyles = makeStyles({
     left: "380px",
   },
   heading: {
-    fontFamily: "Roboto",
-    fontStyle: "normal",
+    // fontFamily: "Roboto",
+    // @FontFace
+    // fontStyle: "normal",
     fontWeight: 700,
     fontSize: "36px",
     lineHeight: "45px",
@@ -36,8 +37,7 @@ const useStyles = makeStyles({
     right: "44.52%",
     top: "56.82%",
     bottom: "17.05%",
-    fontFamily: "Cera Pro",
-    fontStyle: "normal",
+
     fontWeight: "normal",
     fontSize: "18px",
     lineHeight: " 23px",

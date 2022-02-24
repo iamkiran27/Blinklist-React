@@ -12,7 +12,7 @@ import AddToLibraryButton from "../../atoms/AddToLibraryButton/AddToLibraryButto
 
 export const useStyles = makeStyles({
   reading: {
-    width: "100%px",
+    width: "100%",
     height: "15px",
     position: "relative",
     background: "#F1F6F4",
@@ -22,7 +22,7 @@ export const useStyles = makeStyles({
     borderRadius: "0px 0px 8px 8px",
   },
   button: {
-    width: "100%",
+    width: "inherit",
     textTransform: "none",
 
     color: "#0365F2",
@@ -71,7 +71,8 @@ export default function EntrepreneurBooks(props: BooksData) {
               <Card
                 // data-testid="entrepreneur-list-card"
                 sx={{
-                  maxWidth: "300px",
+                  width: "300px",
+
                   marginBottom: 5,
                   marginLeft: 5,
                   borderRadius: "10px",

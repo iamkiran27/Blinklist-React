@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645415740178" clover="3.2.0">
-  <project timestamp="1645415740178" name="All files">
-    <metrics statements="102" coveredstatements="84" conditionals="26" coveredconditionals="20" methods="46" coveredmethods="39" elements="174" coveredelements="143" complexity="0" loc="102" ncloc="102" packages="25" files="25" classes="25"/>
+<coverage generated="1645672191914" clover="3.2.0">
+  <project timestamp="1645672191914" name="All files">
+    <metrics statements="101" coveredstatements="84" conditionals="26" coveredconditionals="20" methods="46" coveredmethods="39" elements="173" coveredelements="143" complexity="0" loc="101" ncloc="101" packages="25" files="25" classes="25"/>
     <package name="src">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="theme.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/theme.tsx">
@@ -27,12 +27,11 @@
       </file>
     </package>
     <package name="src.components.atoms.FinishReadingButton">
-      <metrics statements="5" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+      <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="FinishReadingButton.tsx" path="/home/saikk/Zemoso_Training/react/blinklist/src/components/atoms/FinishReadingButton/FinishReadingButton.tsx">
-        <metrics statements="5" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
         <line num="12" count="3" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
       </file>
@@ -120,8 +119,8 @@
         <metrics statements="4" coveredstatements="2" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="15" count="2" type="stmt"/>
         <line num="16" count="2" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.organisms.BasicTabs">
