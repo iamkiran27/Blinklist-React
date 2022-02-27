@@ -3,7 +3,7 @@ import React from "react";
 
 import { useStyles } from "../../organisms/EntrepreneurBooks/EntrepreneurBooks";
 
-const AddToLibraryButton = () => {
+const AddToLibraryButton = (props: any) => {
   const style = useStyles();
 
   return (
@@ -11,12 +11,11 @@ const AddToLibraryButton = () => {
       role="addToLibrary"
       sx={{
         textTransform: "none",
-
-        color: "#0365F2",
+        color: props.color,
         border: "none",
       }}
       className={style.button}
-      variant="text"
+      variant={props.variant}
     >
       + Add to library
     </Button>

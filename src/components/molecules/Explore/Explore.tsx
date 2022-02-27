@@ -1,9 +1,12 @@
 import React from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import "../../organisms/Navbar.css";
+import { Typography } from "@mui/material";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 interface ExploreInterface {
   openExplore: Function;
+  isNavExtended: boolean;
+  setIsNavExtended: Function;
 }
 
 function Explore(props: ExploreInterface) {
@@ -13,10 +16,15 @@ function Explore(props: ExploreInterface) {
       className="group__items"
       onClick={(e) => {
         props.openExplore(e);
+        props.setIsNavExtended(!props.isNavExtended);
       }}
     >
-      Explore
-      <ExpandMoreIcon></ExpandMoreIcon>
+      <Typography>Explore</Typography>
+      {!props.isNavExtended ? (
+        <ExpandMoreIcon></ExpandMoreIcon>
+      ) : (
+        <ExpandLessIcon></ExpandLessIcon>
+      )}
     </div>
   );
 }

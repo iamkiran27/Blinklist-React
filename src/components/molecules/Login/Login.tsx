@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import "../../organisms/Navbar/Navbar.css";
 
 interface LoginI {
   logout: Function;

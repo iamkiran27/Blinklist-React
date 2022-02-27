@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { useStyles } from "../../organisms/BookDetailPage/BookDetailPage";
+import { useStyles } from "../../templates/BookDetailPage/BookDetailPage";
 
 const KindleButton = () => {
   const classes = useStyles();

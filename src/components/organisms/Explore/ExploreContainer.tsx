@@ -6,6 +6,7 @@ import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
 
 interface ExploreI {
   openExplore: Function;
+  setIsNavExtended: Function;
 }
 
 function ExploreContainer(props: ExploreI) {
@@ -38,6 +39,7 @@ function ExploreContainer(props: ExploreI) {
                 data-testid="exploreNavButton"
                 onClick={() => {
                   props.openExplore();
+                  props.setIsNavExtended(false);
                 }}
                 to="/entrepreneur"
               >

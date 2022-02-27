@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-const ReadNowButton = () => {
+const ReadNowButton = (props: any) => {
   return (
     <Button
       role="readNowButton"

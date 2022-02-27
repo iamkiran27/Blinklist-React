@@ -9,6 +9,10 @@ test("Render SearchIcon Button", () => {
       openExplore={() => {
         console.log("Open explor");
       }}
+      isNavExtended={true}
+      setIsNavExtended={(isNavExtended = false) => {
+        console.log("Nav expanded ", isNavExtended);
+      }}
     />
   );
   expect(screen.getByTestId("explore")).toBeInTheDocument();

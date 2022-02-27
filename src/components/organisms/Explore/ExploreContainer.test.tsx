@@ -11,6 +11,9 @@ test("Render SearchIcon Button", () => {
         openExplore={() => {
           console.log("Explore event triggred ");
         }}
+        setIsNavExtended={(isNavExtended = false) => {
+          console.log("NAv is extended !", isNavExtended);
+        }}
       />
     </MemoryRouter>
   );

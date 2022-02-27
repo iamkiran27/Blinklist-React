@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import { openExplore } from "../../helperFunctions/helper";
 import "./Navbar.css";
 
@@ -12,6 +12,7 @@ import Login from "../../molecules/Login/Login";
 import ExploreContainer from "../Explore/ExploreContainer";
 
 const Navbar: React.FC = () => {
+  const [isNavExtended, setIsNavExtended] = useState(false);
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   return (
     <>
@@ -39,7 +40,11 @@ const Navbar: React.FC = () => {
             </div>
 
             <li>
-              <Explore openExplore={openExplore} />
+              <Explore
+                isNavExtended={isNavExtended}
+                openExplore={openExplore}
+                setIsNavExtended={setIsNavExtended}
+              />
             </li>
 
             <li>My Library</li>
@@ -51,7 +56,10 @@ const Navbar: React.FC = () => {
           )}
         </div>
       </nav>
-      <ExploreContainer openExplore={openExplore} />
+      <ExploreContainer
+        setIsNavExtended={setIsNavExtended}
+        openExplore={openExplore}
+      />
     </>
   );
 };
