@@ -23,40 +23,38 @@ interface Props {
 const RoutingPages = (props: Props) => {
   return (
     <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <LandingPage
-                booksdata={props.data}
-                handleReadAgain={props.handleReadAgain}
-                handleFinish={props.handleFinish}
-              />
-            }
-          />
-          <Route
-            path="/entrepreneur"
-            element={
-              <EntrepreneurPage
-                booksdata={props.data}
-                handleFinish={props.handleFinish}
-              />
-            }
-          />
-          <Route
-            path="/book/:id"
-            element={
-              <BookDetailPage
-                booksdata={props.data}
-                handleFinish={props.handleFinish}
-              />
-            }
-          />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <LandingPage
+              booksdata={props.data}
+              handleReadAgain={props.handleReadAgain}
+              handleFinish={props.handleFinish}
+            />
+          }
+        />
+        <Route
+          path="/entrepreneur"
+          element={
+            <EntrepreneurPage
+              booksdata={props.data}
+              handleFinish={props.handleFinish}
+            />
+          }
+        />
+        <Route
+          path="/book/:id"
+          element={
+            <BookDetailPage
+              booksdata={props.data}
+              handleFinish={props.handleFinish}
+            />
+          }
+        />
+      </Routes>
+      <Footer />
     </>
   );
 };

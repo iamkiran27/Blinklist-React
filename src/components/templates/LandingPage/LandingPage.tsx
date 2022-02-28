@@ -1,6 +1,7 @@
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import BasicTabs from "../../organisms/BasicTabs/BasicTabs";
+import { Typography } from "@mui/material";
 
 type BookData = {
   booksdata: {
@@ -18,17 +19,18 @@ type BookData = {
 const useStyles = makeStyles(() => ({
   landing: {
     marginLeft: "300px",
-
+    // backgroundColor: "blue",
     padding: "24px 24px 24px 24px",
   },
 
   heading: {
     position: "absolute",
+    // backgroundColor: "orange",
 
     width: "190px",
     height: "45px",
     left: "380px",
-    top: "145px",
+    // top: "145px",
     fontFamily: "Cera Pro",
     fontSize: "36px",
     fontWeight: "bold",
@@ -44,7 +46,9 @@ function LandingPage(props: BookData) {
   return (
     <>
       <div className={style.landing} data-testid="landing-page">
-        <h3 className={style.heading}>My Library</h3>
+        <Typography>
+          <h3 className={style.heading}>My Library</h3>
+        </Typography>
 
         <BasicTabs
           data={props.booksdata}

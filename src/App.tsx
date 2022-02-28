@@ -6,6 +6,7 @@ import RoutingPages from "./routing/routingPages";
 import axios from "axios";
 
 import { useAuth0 } from "@auth0/auth0-react";
+import { BrowserRouter } from "react-router-dom";
 
 export const theme = createTheme({
   palette: {

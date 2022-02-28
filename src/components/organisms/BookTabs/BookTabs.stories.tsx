@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import BookTabs from "./BookTabs";
 
 export default {
-  title: "Organisms/BasicTabs",
+  title: "Organisms/BookTabs",
   component: BookTabs,
 } as ComponentMeta<typeof BookTabs>;
 

@@ -23,8 +23,8 @@ const data: {
   added: boolean;
 }[] = [
   {
-    id: 5,
-    image: "https://www.linkpicture.com/q/book6.png",
+    id: 6,
+    image: "https://www.linkpicture.com/q/book7.png",
     name: "Loving Your Business",
     author: "Debbie King",
     time: "13-minute read",
