@@ -1,5 +1,5 @@
-import React, { MouseEventHandler } from "react";
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
+import React from "react";
 import Typography from "@mui/material/Typography";
 import { NavLink } from "react-router-dom";
 import RocketOutlinedIcon from "@mui/icons-material/RocketOutlined";
@@ -27,33 +27,27 @@ function ExploreContainer(props: ExploreI) {
             <Typography color="#116BE9">Explore by category</Typography>
           </Box>
           <Box marginTop={3} paddingTop={2}>
-            {/* <Button
-              // hidden={true}
+            <NavLink
               data-testid="exploreNavButton"
-              onClick={(e) => {
+              onClick={() => {
                 props.openExplore();
+                props.setIsNavExtended(false);
               }}
-            > */}
-            <Typography>
-              <NavLink
-                data-testid="exploreNavButton"
-                onClick={() => {
-                  props.openExplore();
-                  props.setIsNavExtended(false);
-                }}
-                to="/entrepreneur"
-              >
-                <Box>
-                  <Grid container>
-                    <Grid item>
-                      <RocketOutlinedIcon></RocketOutlinedIcon>
-                    </Grid>
-
-                    <Grid item>Entreprenership</Grid>
+              to="/entrepreneur"
+            >
+              <Box>
+                <Grid container>
+                  <Grid item>
+                    <RocketOutlinedIcon></RocketOutlinedIcon>
                   </Grid>
-                </Box>
-              </NavLink>
-            </Typography>
+
+                  <Grid item>
+                    <Typography>Entreprenership</Typography>
+                  </Grid>
+                </Grid>
+              </Box>
+            </NavLink>
+            {/* </Typography> */}
             {/* </Button> */}
 
             <Box>
@@ -100,7 +94,7 @@ function ExploreContainer(props: ExploreI) {
         </Grid>
         <Grid item md={2.5}>
           <Box borderBottom={1} paddingBottom={2}>
-            See recently titles
+            <Typography>See recently titles</Typography>
           </Box>
           <Box marginTop={3} paddingTop={2}>
             <Box>
@@ -158,7 +152,7 @@ function ExploreContainer(props: ExploreI) {
         </Grid>
         <Grid item md={2.5}>
           <Box borderBottom={1} paddingBottom={2}>
-            See popular titles
+            <Typography>See popular titles</Typography>
           </Box>
           <Box marginTop={3} paddingTop={2}>
             <Box>

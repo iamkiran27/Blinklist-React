@@ -83,70 +83,74 @@ const Booklist = (props: BookData) => {
   return (
     <div className={style.list} data-testid="book-list">
       <div className="row">
-        {props.books.map((book) => {
-          if (!book.finished && book.added) {
-            return (
-              <div data-testid="book-list-card">
-                <Card
-                  sx={{
-                    maxWidth: "300px",
-                    marginBottom: 5,
-                    marginLeft: 10,
-                    borderRadius: "10px",
-                  }}
-                  key={book.name}
-                >
-                  <CardMedia
-                    src={book.image}
-                    component="img"
-                    height="300px"
-                    alt="Book"
-                  />
-                  <CardContent>
-                    <Typography
-                      gutterBottom
-                      component="div"
-                      className={style.bookName}
-                    >
-                      {book.name}
-                    </Typography>
-
-                    <Typography className={style.authorName}>
-                      {book.author}
-                    </Typography>
-                    <Grid container>
-                      <Grid item className={style.gridItem}>
-                        <AccessTimeIcon
-                          sx={{ height: "16.67px", width: "16.67px" }}
-                        ></AccessTimeIcon>
-                      </Grid>
-                      <Grid item className={style.gridItem}>
-                        <Typography className={style.readTypo}>
-                          {book.time}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                    <span className={style.more}>
-                      <MoreHorizIcon></MoreHorizIcon>
-                    </span>
-                    <Button
-                      data-testid="book-list-button"
-                      onClick={(e) => {
-                        props.handleFinishReading(book.id);
+        <Grid container>
+          {props.books.map((book) => {
+            if (!book.finished && book.added) {
+              return (
+                <div data-testid="book-list-card">
+                  <Grid item>
+                    <Card
+                      sx={{
+                        maxWidth: "300px",
+                        marginBottom: 5,
+                        marginLeft: 10,
+                        borderRadius: "10px",
                       }}
-                      sx={{ textTransform: "none", color: "blue" }}
-                      variant="text"
+                      key={book.name}
                     >
-                      Finish Reading
-                    </Button>
-                  </CardContent>
+                      <CardMedia
+                        src={book.image}
+                        component="img"
+                        height="300px"
+                        alt="Book"
+                      />
+                      <CardContent>
+                        <Typography
+                          gutterBottom
+                          component="div"
+                          className={style.bookName}
+                        >
+                          {book.name}
+                        </Typography>
 
-                  <Typography className={style.readingBar} />
-                </Card>
-              </div>
-            );
-          }
-        })}
+                        <Typography className={style.authorName}>
+                          {book.author}
+                        </Typography>
+                        <Grid container>
+                          <Grid item className={style.gridItem}>
+                            <AccessTimeIcon
+                              sx={{ height: "16.67px", width: "16.67px" }}
+                            ></AccessTimeIcon>
+                          </Grid>
+                          <Grid item className={style.gridItem}>
+                            <Typography className={style.readTypo}>
+                              {book.time}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                        <span className={style.more}>
+                          <MoreHorizIcon></MoreHorizIcon>
+                        </span>
+                        <Button
+                          data-testid="book-list-button"
+                          onClick={(e) => {
+                            props.handleFinishReading(book.id);
+                          }}
+                          sx={{ textTransform: "none", color: "blue" }}
+                          variant="text"
+                        >
+                          Finish Reading
+                        </Button>
+                      </CardContent>
+
+                      <Typography className={style.readingBar} />
+                    </Card>
+                  </Grid>
+                </div>
+              );
+            }
+          })}
+        </Grid>
       </div>
     </div>
   );

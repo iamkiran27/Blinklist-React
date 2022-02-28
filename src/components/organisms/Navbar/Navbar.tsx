@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
 import { openExplore } from "../../helperFunctions/helper";
 import "./Navbar.css";
@@ -10,35 +9,26 @@ import Explore from "../../molecules/Explore/Explore";
 import Logout from "../../molecules/Logout/Logout";
 import Login from "../../molecules/Login/Login";
 import ExploreContainer from "../Explore/ExploreContainer";
+import { Grid } from "@mui/material";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const [isNavExtended, setIsNavExtended] = useState(false);
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
   return (
     <>
-      <nav className="navbar navbar-expand-lg " data-testid="navbar-test">
-        <NavLink className="navbar-brand" to="/">
-          {/* <img src={require("../atoms/logo.png")} height="30" alt="" /> */}
-          <BlinkListLogo />
-        </NavLink>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+      <div className="navbar  " data-testid="navbar-test">
+        <Grid container alignContent="center">
+          <Grid item>
+            <BlinkListLogo />
+          </Grid>
 
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav mr-auto">
+          <Grid item>
             <div className="group__search">
               <SearchIconComponent />
             </div>
+          </Grid>
 
+          <Grid item>
             <li>
               <Explore
                 isNavExtended={isNavExtended}
@@ -46,16 +36,21 @@ const Navbar: React.FC = () => {
                 setIsNavExtended={setIsNavExtended}
               />
             </li>
+          </Grid>
 
+          <Grid item>
             <li>My Library</li>
-          </ul>
-          {!isAuthenticated ? (
-            <Logout loginWithRedirect={loginWithRedirect} />
-          ) : (
-            <Login logout={logout} />
-          )}
-        </div>
-      </nav>
+          </Grid>
+
+          <Grid item marginLeft="53%">
+            {!isAuthenticated ? (
+              <Logout loginWithRedirect={loginWithRedirect} />
+            ) : (
+              <Login logout={logout} />
+            )}
+          </Grid>
+        </Grid>
+      </div>
       <ExploreContainer
         setIsNavExtended={setIsNavExtended}
         openExplore={openExplore}

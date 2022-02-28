@@ -26,6 +26,6 @@ li:hover {
 }
 .navbar li {
   margin-left: 2.5rem;
-
+  list-style-type: none;
   text-align: left;
 }
